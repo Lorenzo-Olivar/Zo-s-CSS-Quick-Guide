@@ -6,16 +6,99 @@
     <title>Zo's CSS SuperQuickGuide</title>
 </head>
 <body>
+    <!-- Header -->
     <header>
         <h1>Zo's CSS Snippet Cheatsheet</h1>
     </header>
+    <!-- Instructions -->
     <section>
         <p>Forgot the syntax for a specific CSS code? Need to add to the CSS Quick Guide? Add it to the ever-growing list! Also, feel free to click on a snippet of your choice and it'll be automatically selected for you to copy!</p>
     </section>
+    <!-- Body -->
     <main>
-        <article></article>
-        <article></article>
+        <!-- CSS Snippets -->
+        <article>
+            <figure>
+                <h2>Flexbox Row</h2>
+                <p>Use these three properties to create a Flexbox row layout.</p>
+                <pre>
+                    .row {
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                    }
+                </pre>
+            </figure>
+            <figure>
+                <h2>Flexbox Column</h2>
+                <p>Use this to create a Flexbox column layout.</p>
+                <pre>
+                    .column {
+                        display: flex;
+                        flex-direction: column;
+                    }
+                </pre>
+            </figure>
+            <figure>
+                <h2>CSS Grid Layout</h2>
+                <p>Build a 12-column layout using CSS Grid</p>
+                <pre>
+                    .grid {
+                        display: grid;
+                        width: 100%;
+                        grid-template-columns:
+                        repeat(12, 1fr);
+                    }
+                </pre>
+            </figure>
+            <figure>
+                <h2>Linear Gradients</h2>
+                <p>This will create a backgound linear gradient from top to bottom.</p>
+                <pre>
+                    .linear-gradient-background {
+                        background-image:
+                        linear-gradient(
+                            rgba(232, 182, 236, 0.3) 0%,
+                            rgba(232, 182, 236, 0.6) 100%
+                        );
+                    }
+                </pre>
+            </figure>
+            <figure>
+                <h2>Box Transition Glow</h2>
+                <p>Use transition and box shadows to glow on hover.</p>
+                <pre>
+                    .code-card .card-header {
+                        border-radius: 8px;
+                        transition: all 0.5s
+                        ease-in-out;
+                    }
+
+                    .code-card:hover,
+                    .code-card:hover .card-header {
+                        box-shadow: inset 0px 0px 8px
+                        rgba(232, 182, 236, 1),
+                        0 0 15px
+                        rgba(232, 182, 236, 1);
+                    }
+                </pre>
+            </figure>
+            <figure>
+                <h2>Overlay Card with Title</h2>
+                <p>Use position properties and negative margins to raise elements higher than their natural starting point.</p>
+                <pre>
+                    .card-header {
+                        position: relative;
+                        margin-top: -20px;
+                    }
+                </pre>
+            </figure>
+        </article>
+            
     </main>
-    <footer></footer>
+    <!-- Footer -->
+    <footer>
+        <h3>Made with 💚 and CSS</h3>
+    </footer>
 </body>
 </html>
