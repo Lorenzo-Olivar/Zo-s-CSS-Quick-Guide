@@ -24,26 +24,80 @@ header h1 {
     line-height: 1.5;
 }
 
-article h2 {
-    font-size: 150%;
-    color: #e867ed;
-    font-weight: bold;
-    padding: 5px;
-    display: inline-block;
-    border-style: solid;
-    border-width: 1px;
+article {
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
+figure {
+    border: 2px dashed white;
+    flex: 1 0 0;
+    padding: 10px;
+    min-width: 30%;
+    margin: 40px 5px 5px 5px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+}
+
+p {
+    color: rgb(232, 103, 237);
+    font-size: 80%;
+    margin: 5px 0px 10px 0px;
+}
+
+pre {
+    color: white;
+    font-family: monospace;
+    font-size: 100%;
+    white-space: pre-wrap;
+    padding: 10px 5px 0px 5px;
+    height: 100%;
+    border-radius: 5px;
+    background-image: linear-gradient(rgba(232, 182, 236, 0.3) 0%, rgb(232, 103, 237) 100%);
+    user-select: all;
+}
+
+h2 {
+    font-size: 150%;
+    color: rgb(232, 103, 237);
+    font-weight: bold;
+    padding: 5px;
+    border-style: solid;
+    border-width: 1px;
+    position: relative;
+    margin-top: -25px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+figure, h2 {
+    transition: all 0.5s ease-in-out;
+}
+
+figure:hover, figure:hover h2 {
+    box-shadow: inset 0px 0px 8px rgba(232, 182, 236, 1), 0 0 15px rgba(232, 182, 236, 1);
+}
 /*-- Media Queries --*/
 
 @media screen and (max-width: 992px) {
     .instructions p {
         margin: 0px 60px 15px 60px;
     }
+
+    figure {
+        min-width: 32%;
+    }
 }
 
 @media screen and (max-width: 768px) {
     .instructions p {
         margin: 0px 25px 15px 25px;
+    }
+
+    figure {
+        min-width: 50%;
     }
 }
